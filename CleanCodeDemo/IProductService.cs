@@ -9,7 +9,6 @@ namespace CleanCodeDemo
    public interface IProductService
     {
         void Sell(Product product, IKullanici kullanici);
-        void Sell(Product product, IKullanici kullanici, CurrencyRate currencyRate);
         void Pay(Product product);
         void ByCurrencyRatePay(Product product,CurrencyRate currencyRate, IBankService bankService);
     }

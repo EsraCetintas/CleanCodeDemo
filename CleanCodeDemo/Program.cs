@@ -37,10 +37,11 @@ namespace CleanCodeDemo
 
             IProductService customerProductService = new ProductManager();
             customerProductService.Sell(product, customer1);
-            customerProductService.Sell(product, customer2, currencyRate);
+            customerProductService.ByCurrencyRatePay(product, currencyRate, new CentralBankServiceAdapter());
 
             IProductService studentProductService = new ProductManager();
             studentProductService.Sell(product, student);
+            studentProductService.Pay(product);
             Console.ReadKey();
         }
     }

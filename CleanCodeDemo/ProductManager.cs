@@ -12,13 +12,6 @@ namespace CleanCodeDemo
         {
             Console.WriteLine(kullanici.FirstName + " " + kullanici.LastName + " ürünü satın aldı");
             product.Price = product.Price * kullanici.DiscountRate;
-            Pay(product);
-        }
-
-        public void Sell(Product product, IKullanici kullanici, CurrencyRate currencyRate)
-        {
-            Console.WriteLine(kullanici.FirstName + " " + kullanici.LastName + " ürünü satın aldı");
-            ByCurrencyRatePay(product, currencyRate,new FakeBankManager());
         }
 
         public void Pay(Product product)
